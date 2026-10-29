@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment files and credentials (STRICT: Zero secrets in repo)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Next.js Build Output
+.next/
+out/
+build/
+dist/
+
+# TypeScript & Cache
+*.tsbuildinfo
+.eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+env/
+venv/
+
+# Go
+services/api/bin/
+*.exe
+*.test
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Docker Volumes
+postgres_data/
+redis_data/
+minio_data/
+

@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@ai-lmc/types": ["../packages/types/src/index.ts"],
+      "@ai-lmc/ui": ["../packages/ui/src/index.ts"]
     }
   },
   "include": [

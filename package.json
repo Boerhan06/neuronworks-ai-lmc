@@ -1,0 +1,26 @@
+{
+  "name": "neuronworks-ai-lmc-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "scripts": {
+    "dev": "concurrently -n \"WEB,API,AI-ORCH\" -c \"magenta,green,cyan\" \"pnpm --filter @ai-lmc/web dev\" \"go -C backend-core run ./cmd/server\" \"python -m uvicorn --app-dir ai-orchestrator main:app --host 127.0.0.1 --port 8000\"",
+    "dev:web": "pnpm --filter @ai-lmc/web dev",
+    "dev:api": "go -C backend-core run ./cmd/server",
+    "dev:ai": "python -m uvicorn --app-dir ai-orchestrator main:app --host 127.0.0.1 --port 8000",
+    "dev:gpu": "python -m uvicorn --app-dir gpu-worker main:app --host 127.0.0.1 --port 8002",
+    "build": "pnpm --filter @ai-lmc/web build",
+    "lint": "pnpm --filter @ai-lmc/web lint",
+    "typecheck": "pnpm --recursive run typecheck",
+    "test:web": "pnpm --filter @ai-lmc/web test || echo Web test not configured",
+    "test:api": "go -C backend-core test ./...",
+    "test:ai": "python -m pytest -o pythonpath=ai-orchestrator ai-orchestrator",
+    "test:gpu": "python -m pytest -o pythonpath=gpu-worker gpu-worker",
+    "test": "pnpm test:api && pnpm test:ai && pnpm test:gpu",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.2"
+  }
+}

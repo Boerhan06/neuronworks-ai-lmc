@@ -1,0 +1,9 @@
+node_modules
+.next
+dist
+bin
+*.log
+.agent
+*.pdf
+pnpm-lock.yaml
+

@@ -13,7 +13,7 @@ neuronworks-ai-lmc/
 ├── docs/                      # Dokumen bersama (PRD, keputusan arsitektur, roadmap, studi kasus)
 ├── frontend-web/              # [Layer 1] Ruang kerja Diki: Next.js 16 App Router (Creator Studio, Dashboard, Learner)
 ├── backend-core/              # [Layer 2] Ruang kerja Dafa: Golang (LMS Core API, Kursus, RBAC, LRS)
-├── ai-orchestrator/           # [Layer 3] Ruang kerja Anda & Zulfi: Python (Agen LLM, RAG, Ingestion, Scene Script)
+├── ai-orchestrator/           # [Layer 3] Ruang kerja Burhan & Zulfi: Python (Agen LLM, RAG, Ingestion, Scene Script)
 ├── gpu-worker/                # [Layer 4] Ruang kerja Davin: Python (Worker Lokal TTS, LatentSync, Video Gen, FFmpeg)
 ├── mobile-app/                # Ruang kerja Android Kotlin Native (Fase lanjutan)
 ├── packages/
@@ -35,7 +35,7 @@ neuronworks-ai-lmc/
 | :--- | :--- | :--- | :--- | :--- |
 | **Web Portal** | Layer 1 Experience | `http://localhost:3000` | **Diki** | Studio Pembuat (`/studio`), Dasbor L&D (`/dashboard`), Portal Pembelajar (`/courses`). |
 | **Backend Core** | Layer 2 LMS Core | `http://localhost:8081` | **Dafa** | Go REST API Gateway, endpoint `/health`, `/api/v1/courses`, dan otentikasi. |
-| **AI Orchestrator** | Layer 3 Orchestrator | `http://localhost:8000` | **Anda & Zulfi** | FastAPI pipeline naskah 5 adegan (180 detik), sitasi wajib, dan AI Tutor RAG. |
+| **AI Orchestrator** | Layer 3 Orchestrator | `http://localhost:8000` | **Burhan & Zulfi** | FastAPI pipeline naskah 5 adegan (180 detik), sitasi wajib, dan AI Tutor RAG. |
 | **GPU Worker** | Layer 4 Media AI | `http://localhost:8002` | **Davin** | Worker GPU lokal untuk XTTS-v2, LatentSync lip-sync, dan render FFmpeg. |
 | **PostgreSQL + pgvector** | Layer 5 Data | `localhost:5432` | Tim Infra | Basis data relasional enterprise dan vector store embedding `bge-m3`. |
 | **Redis 7** | Layer 5 Cache/Queue | `localhost:6379` | Tim Infra | Message broker koordinasi antrean render dan VRAM GPU. |

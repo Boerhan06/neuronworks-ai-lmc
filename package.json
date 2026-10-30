@@ -17,7 +17,8 @@
     "test:ai": "python -m pytest -o pythonpath=ai-orchestrator ai-orchestrator",
     "test:gpu": "python -m pytest -o pythonpath=gpu-worker gpu-worker",
     "test": "pnpm test:api && pnpm test:ai && pnpm test:gpu",
-    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "push": "git add . && git commit -m \"chore: update otomatis\" && git push origin main"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
